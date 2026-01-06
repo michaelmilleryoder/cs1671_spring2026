@@ -1,13 +1,16 @@
 project:
   type: website
+  output-dir: docs
+  render:
+      - "*.qml"
+      - "!conda_env/"
 
 website:
-  title: "CS 1671 Human Language Technologies, Spring 2026"
+  title: "CS 1671/2071 Human Language Technologies, Spring 2026"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
 
 format:
   html:
