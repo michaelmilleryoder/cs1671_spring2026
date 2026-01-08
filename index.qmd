@@ -67,14 +67,14 @@ Spring 2026
             <td>01-21 W</td>
             <td>Linear algebra, probability</td>
             <td></td>
-            <td></td>
+            <td>In-class quiz</td>
         </tr>
         <tr>
             <td>4</td>
             <td>01-26 M</td>
             <td>Python for data science</td>
             <td></td>
-            <td><strong>HW1 due 01-23</strong></td>
+            <td></td>
         </tr>
         <tr>
         <tr>
@@ -82,7 +82,7 @@ Spring 2026
             <td>01-28 W</td>
             <td>Machine learning intro, NLP tasks and applications</td>
             <td></td>
-            <td>Project idea form out 01-29</td>
+            <td>In-class quiz;<br/>Project idea form out 01-29</td>
         </tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 2: N-grams and statistical NLP</td>
         </tr>
@@ -98,7 +98,7 @@ Spring 2026
             <td>02-04 W</td>
             <td>N-gram language models part 1</td>
             <td>J+M 3-3.6, 3.8</td>
-            <td>In-class quiz;<br/><a href="hw1">HW1</a> out;<br/><strong><a href="https://forms.cloud.microsoft/r/5kXGyMSFpF">Project idea form</a> due 09-11</strong></td>
+            <td>In-class quiz;<br/><strong>Project idea form due 02-05</strong></td>
         </tr>
         <tr>
             <td>8</td>
@@ -112,7 +112,7 @@ Spring 2026
             <td>02-11 W</td>
             <td>Project match day, CRCD tutorial</td>
             <td></td>
-            <td></td>
+            <td>In-class quiz</td>
         </tr>
         <tr>
             <td>10</td>
@@ -126,7 +126,7 @@ Spring 2026
             <td>02-18 W</td>
             <td>Logistic regression part 2</a></td>
             <td>J+M 4.5-4.8, 4.13, 4.16</td>
-            <td>In-class quiz;<br/><strong><a href="hw1">HW1</a> due 09-26</strong><br/><a href="hw2">HW2</a> out 09-26</td>
+            <td><strong>HW1 due 02-19</strong></td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 3: Neural networks and word2vec</td>
@@ -141,48 +141,48 @@ Spring 2026
         <tr>
             <td>13</td>
             <td>02-25 W</td>
-            <td>Neural networks part 1</td>
+            <td>Neural networks part 1, project peer group feedback</td>
             <td>J+M 6-6.1, 6.3-6.5</td>
-            <td>In-class quiz</td>
+            <td><strong><a href="project.html#project-proposal">Project proposal</a> due 02-26</strong>;<br/>HW2 out 02-27</td>
         </tr>
         <tr>
             <td>14</td>
             <td>03-02 M</td>
-            <td><a href="slides/session12_cs2731_fall2025.pdf">Neural networks part 2</a></td>
+            <td>Neural networks part 2</td>
             <td>J+M 6.6, 13-13.2</td>
             <td></td>
         </tr>
         <tr>
-            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: Large language models (LLMs)</td>
-        </tr>
-        <tr>
             <td>15</td>
             <td>03-04 W</td>
-            <td>Introduction to LLMs</td>
-            <td>J+M 7-7.5, 7.7</td>
-            <td>In-class quiz;<br/><strong><a href="hw2">HW2</a> due 10-09</strong></td>
+            <td><strong>Project proposal presentations</strong></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr style="background-color:#cccccc">
             <td colspan=5 style="text-align:center; font-style:italic">Spring break 03-09 to 03-13</td>
         </tr>
         <tr>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: Large language models (LLMs)</td>
+        </tr>
+        <tr>
             <td>16</td>
             <td>03-16 M</td>
-            <td>Transformers part 1</a></td>
-            <td>J+M 8-8.2</td>
+            <td>Introduction to LLMs</td>
+            <td>J+M 7-7.5, 7.7</td>
             <td></td>
         <tr>
             <td>17</td>
             <td>03-18 W</td>
-            <td>Transformers part 2, project peer group feedback</td>
-            <td>J+M 8.4-8.7, 8.10</td>
-            <td><strong><a href="project.html#project-proposal">Project proposal</a> due 10-17</strong></td>
+            <td>Transformers part 1</a></td>
+            <td>J+M 8-8.2</td>
+            <td>In-class quiz;<br/><strong>HW2 due 03-19</strong></td>
         </tr>
         <tr>
             <td>18</td>
             <td>03-23 M</td>
-            <td><strong>Project proposal presentations</strong></td>
-            <td></td>
+            <td>Transformers part 2</td>
+            <td>J+M 8.4-8.7, 8.10</td>
             <td></td>
         </tr>
         <tr>
@@ -190,7 +190,7 @@ Spring 2026
             <td>03-25 W</td>
             <td>Post-training LLMs</td>
             <td>J+M 9</td>
-            <td><a href="hw3">HW3</a> out 10-26</td>
+            <td><strong><a href="project.html#progress-report">Project progress report</a> due 03-26</strong>;<br/>HW3 out 03-27</td>
         </tr>
         <tr>
             <td>20</td>
@@ -218,7 +218,7 @@ Spring 2026
             <td>04-08 W</td>
             <td><strong>Exam</strong></td>
             <td></td>
-            <td><strong><a href="project.html#progress-report">Project progress report</a> due 11-13</strong></td>
+            <td></td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 6: NLP applications and ethics</td>
@@ -235,7 +235,7 @@ Spring 2026
             <td>04-15 W</td>
             <td>Information retrieval, RAG</td>
             <td>J+M 11-11.3, 11.5-11.6</td>
-            <td><strong><a href="hw4">HW4</a> due 11-20</strong></td>
+            <td><strong>HW3 due 04-16</strong></td>
         </tr>
         <tr>
             <td>26</td>
@@ -266,14 +266,16 @@ Spring 2026
 Description | Points | Percentage of final grade
 ---|---:|---:
 **Homework assignments total** | **300** | **30**
-&ensp;Each homework of 3 total | 100 | 10
+&ensp;Homework 1 | 60 | 6
+&ensp;Homework 2 | 120 | 12
+&ensp;Homework 3 | 120 | 12
 **Project total** | **250** | **25**
-&ensp;Project idea submission form | 5 | 0.5
+&ensp;Project idea form | 5 | 0.5
 &ensp;Project proposal | 50 | 5
 &ensp;Project progress report | 55 | 5.5
 &ensp;Project report | 140 | 14
 **Quizzes total** | **150** | **15**
-&ensp;Each quiz of 5 total | 30 | 3
+&ensp;Each quiz of 6 total, lowest score dropped | 30 | 3
 **Exam** | **200** | **20**
 **Participation total** | **100** | **10**
 &ensp;Attendance | 60 | 6
@@ -359,6 +361,8 @@ Only 1 resubmission per homework assignment will be accepted.
 ## Academic integrity policy
 Students in this course will be expected to comply with the [University of Pittsburgh’s Policy on Academic Integrity](https://www.provost.pitt.edu/info/ai1.html). Any student suspected of violating this obligation for any reason during the semester will be required to participate in the procedural process, initiated at the instructor level, as outlined in the University Guidelines on Academic Integrity. To learn more about Academic Integrity, visit the [Academic Integrity Guide](http://pitt.libguides.com/academicintegrity/) for an overview of the topic. For hands-on practice, complete the [Academic Integrity Modules](http://pitt.libguides.com/academicintegrity/plagiarism).
 
+For any assignment where the academic integrity policy has been violated, students will be assigned a 0 (or a failing grade, depending on the extent).
+
 ### Generative AI policy
 You are allowed to use generative AI programs (ChatGPT, etc.) as a student in this course in limited circumstances. Since much of this course is about developing such tools in NLP, using currently available tools can expose you to the current capabilities and limitations of such systems.
 
@@ -366,6 +370,8 @@ However, your ethical responsibilities as a student remain the same. You must fo
 Here are some principles to keep in mind that can help you determine whether or not a specific use of generative AI is acceptable in this course (for all forms of generation: writing, code, images or other forms). Please ask the instructor if you are not sure about a specific use. You will not be blamed or retaliated against for asking.
 
 * **Use as an aid, not for a finished product.** LLMs could be used in this course to generate ideas, draft bibliographies, study guides, or for revising existing writing. Use for drafting entire homework or project reports is not acceptable, even if students revise this draft, since being able to communicate NLP procedures and research is a learning objective. Also keep in mind that language models have no notion of reality and will hallucinate facts and citations.
+
+* **Allowed code generation varies between homework assignments and the final project.** The learning objectives of homework assignments in this class are to be able to implement NLP systems to address specific tasks. As such, code generation is allowed for small pieces of code in homework assignments, but not for the code used for answering an entire question. Students must understand what each line of code in their submitted homework assignments is doing. The open-ended course project, in contrast, focuses more on skills of designing NLP systems for new tasks and datasets. Larger blocks of generated code are allowed in the course project.
 
 * **Cite its use.** The University of Pittsburgh's academic integrity policy applies to all uncited or improperly cited use of content, whether that work is created by human beings alone or in collaboration with a generative AI. If you use a generative AI tool to develop content for an assignment, you are required to cite the tool’s contribution to your work. In practice, cutting and pasting content from any source without citation is plagiarism. Likewise, paraphrasing content from a generative AI without citation is plagiarism. Similarly, using any generative AI tool without appropriate acknowledgement will be treated as plagiarism. See the [APA guidelines on how to cite ChatGPT](https://apastyle.apa.org/blog/how-to-cite-chatgpt). Citing your use of LLMs will also inform teaching staff on how such tools are being used in education for developing better future policies.
 
