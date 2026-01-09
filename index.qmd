@@ -17,7 +17,7 @@ Spring 2026
 |Instructor contact|[mmyoder@pitt.edu](mailto:mmyoder@pitt.edu) or through Canvas messages|
 |Instructor office hours|By appointment in person at SENSQ 6309 or on Zoom<br/>[Book an appointment](https://outlook-sdf.office.com/bookwithme/user/2536c861ee3f49ab9a4a872751754279@pitt.edu?anonymous&ep=plink)|
 |TA|Zhuochun Li|
-|TA contact||
+|TA contact|[zhl163@pitt.edu](mailto:zhl163@pitt.edu)|
 |TA office hours|By appointment|
 |Textbook (free online)|[[J+M] Jurafsky and Martin, *Speech and Language Processing*, 3e draft, 2026-01-06](https://web.stanford.edu/~jurafsky/slp3)|
 
@@ -97,15 +97,15 @@ Spring 2026
         <tr>
             <td>7</td>
             <td>02-04 W</td>
-            <td>N-gram language models part 1</td>
+            <td>N-gram language models</td>
             <td>J+M 3-3.6, 3.8</td>
             <td>In-class quiz;<br/><strong>Project idea form due 02-05</strong></td>
         </tr>
         <tr>
             <td>8</td>
             <td>02-09 M</td>
-            <td>N-gram language models part 2, text classification</td>
-            <td>J+M 4 (intro), 4.9-4.10, 4.12</td>
+            <td>Logistic regression part 1</td>
+            <td>J+M 4-4.4</td>
             <td></td>
         </tr>
         <tr>
@@ -118,15 +118,15 @@ Spring 2026
         <tr>
             <td>10</td>
             <td>02-16 M</td>
-            <td>Logistic regression part 1</td>
-            <td>J+M 4.1-4.4</td>
+            <td>Logistic regression part 2</a></td>
+            <td>J+M 4.5-4.8, 4.13, 4.16</td>
             <td></td>
         </tr>
         <tr>
             <td>11</td>
             <td>02-18 W</td>
-            <td>Logistic regression part 2</a></td>
-            <td>J+M 4.5-4.8, 4.13, 4.16</td>
+            <td>Text classification evaluation</td>
+            <td>J+M 4.9-4.10, 4.12</td>
             <td>In-class quiz;<br/><strong>HW1 due 02-19</strong></td>
         </tr>
         <tr>
