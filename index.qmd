@@ -1,5 +1,5 @@
 ---
-title: "CS 1671/2071 Human Language Technologies"
+title: "CS 1671 / CS 2071 / ISSP 2071 Human Language Technologies, Spring 2026"
 ---
 
 ::: {style="text-align: center"}

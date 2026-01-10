@@ -6,7 +6,7 @@ project:
       - "!conda_env/"
 
 website:
-  title: "CS 1671/2071 Human Language Technologies, Spring 2026"
+  title: "CS 1671 / CS 2071 / ISSP 2071 Human Language Technologies, Spring 2026"
   navbar:
     left:
       - href: project.qmd
