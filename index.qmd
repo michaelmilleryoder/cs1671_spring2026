@@ -1,5 +1,5 @@
 ---
-title: "CS 1671 / CS 2071 / ISSP 2071 Human Language Technologies, Spring 2026"
+title: "CS 1671 / CS 2071 / ISSP 2071 Human Language Technologies"
 ---
 
 ::: {style="text-align: center"}
@@ -44,7 +44,7 @@ Spring 2026
         <tr>
             <td>1</td>
             <td>01-12 M</td>
-            <td>Course, NLP intro</td>
+            <td><a href="slides/session1_cs1671_spring2026.pdf">Course, NLP intro</a></td>
             <td></td>
             <td></td>
         </tr>
@@ -222,7 +222,7 @@ Spring 2026
             <td></td>
         </tr>
         <tr>
-            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 6: NLP applications and ethics</td>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 5: NLP applications and ethics</td>
         </tr>
         <tr>
             <td>24</td>
