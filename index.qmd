@@ -1,5 +1,5 @@
 ---
-title: "CS 1671 / CS 2071 / ISSP 2071 Human Language Technologies"
+title: "CS 1671 / CS 2071 / ISSP 2071<br/>Human Language Technologies"
 ---
 
 ::: {style="text-align: center"}
