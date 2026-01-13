@@ -18,7 +18,7 @@ Spring 2026
 |Instructor office hours|By appointment in person at SENSQ 6309 or on Zoom<br/>[Book an appointment](https://outlook-sdf.office.com/bookwithme/user/2536c861ee3f49ab9a4a872751754279@pitt.edu?anonymous&ep=plink)|
 |TA|Zhuochun Li|
 |TA contact|[zhl163@pitt.edu](mailto:zhl163@pitt.edu)|
-|TA office hours|By appointment|
+|TA office hours|W 12-1pm, IS 707|
 |Textbook (free online)|[[J+M] Jurafsky and Martin, *Speech and Language Processing*, 3e draft, 2026-01-06](https://web.stanford.edu/~jurafsky/slp3)|
 
 <!--|Class notebooks |[CRCD JupyterHub nbgitpuller link](https://jupyter.crc.pitt.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmichaelmilleryoder%2Fcs1671_jupyterhub&urlpath=lab%2Ftree%2Fcs1671_jupyterhub%2F&branch=main) (Pitt login required, public link to source [here](https://github.com/michaelmilleryoder/cs1671_jupyterhub)).|-->
@@ -51,7 +51,7 @@ Spring 2026
         <tr>
             <td>2</td>
             <td>01-14 W</td>
-            <td>Probability and linear algebra review</td>
+            <td><a href="slides/session2_cs1671_spring2026.pdf">Probability and linear algebra review</a></td>
             <td></td>
             <td></td>
         </tr>
