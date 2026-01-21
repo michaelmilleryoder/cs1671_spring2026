@@ -24,7 +24,7 @@ Spring 2026
 
 
 # Schedule
-*Subject to change. Last revised 2026-01-08. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2026-01-21. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -71,8 +71,8 @@ Spring 2026
         <tr>
             <td>4</td>
             <td>01-26 M</td>
-            <td>Text normalization</td>
-            <td>J+M 2-2.3, 2.5-2.7</td>
+            <td>Words, tokens, and preprocessing</td>
+            <td>J+M 2-2.6, 2.8, 2.10</td>
             <td>HW1 out 01-27</td>
         </tr>
         <tr>
