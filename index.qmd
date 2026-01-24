@@ -24,7 +24,7 @@ Spring 2026
 
 
 # Schedule
-*Subject to change. Last revised 2026-01-21. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2026-01-24. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -112,7 +112,7 @@ Spring 2026
             <td>02-11 W</td>
             <td>Project match day, CRCD tutorial</td>
             <td></td>
-            <td>In-class quiz</td>
+            <td>In-class quiz;<br/><strong>HW1 due 02-12</strong></td>
         </tr>
         <tr>
             <td>10</td>
@@ -126,7 +126,7 @@ Spring 2026
             <td>02-18 W</td>
             <td>Text classification evaluation</td>
             <td>J+M 4.9-4.10, 4.12</td>
-            <td>In-class quiz;<br/><strong>HW1 due 02-19</strong></td>
+            <td>In-class quiz;<br/>HW2 out 02-20</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 3: Neural networks and word2vec</td>
@@ -143,7 +143,7 @@ Spring 2026
             <td>02-25 W</td>
             <td>Neural networks part 1, project peer group feedback</td>
             <td>J+M 6-6.1, 6.3-6.5</td>
-            <td><strong><a href="project.html#project-proposal">Project proposal</a> due 02-26</strong>;<br/>HW2 out 02-27</td>
+            <td><strong><a href="project.html#project-proposal">Project proposal</a> due 02-27</strong></td>
         </tr>
         <tr>
             <td>14</td>
@@ -170,13 +170,13 @@ Spring 2026
             <td>03-16 M</td>
             <td>Introduction to LLMs</td>
             <td>J+M 7-7.5, 7.7</td>
-            <td></td>
+            <td><strong>HW2 due 03-17</strong></td>
         <tr>
             <td>17</td>
             <td>03-18 W</td>
             <td>Transformers part 1</a></td>
             <td>J+M 8-8.2</td>
-            <td>In-class quiz;<br/><strong>HW2 due 03-19</strong></td>
+            <td>In-class quiz</td>
         </tr>
         <tr>
             <td>18</td>
