@@ -15,7 +15,7 @@ Spring 2026
 |Location|SENSQ 5502|
 |Instructor|[Michael Miller Yoder](https://michaelmilleryoder.github.io), PhD. *Please call me "Michael"*|
 |Instructor contact|[mmyoder@pitt.edu](mailto:mmyoder@pitt.edu) or through Canvas messages|
-|Instructor office hours|By appointment in person at SENSQ 6309 or on Zoom<br/>[Book an appointment](https://outlook-sdf.office.com/bookwithme/user/2536c861ee3f49ab9a4a872751754279@pitt.edu?anonymous&ep=plink)|
+|Instructor office hours|By appointment in person at SENSQ 6309 or on Zoom<br/>[Book an appointment](https://outlook.office.com/bookwithme/user/2536c861ee3f49ab9a4a872751754279@pitt.edu?anonymous&ep=plink)|
 |TA|Zhuochun Li|
 |TA contact|[zhl163@pitt.edu](mailto:zhl163@pitt.edu)|
 |TA office hours|W 12-1pm, IS 707|
