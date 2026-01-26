@@ -71,7 +71,7 @@ Spring 2026
         <tr>
             <td>4</td>
             <td>01-26 M</td>
-            <td>Words, tokens, and preprocessing</td>
+            <td><a href="slides/session4_cs1671_spring2026.pdf">Words, tokens, and preprocessing</a></td>
             <td>J+M 2-2.6, 2.8, 2.10</td>
             <td>HW1 out 01-27</td>
         </tr>
