@@ -79,7 +79,7 @@ Spring 2026
         <tr>
             <td>5</td>
             <td>01-28 W</td>
-            <td>Machine learning intro, NLP tasks and applications</td>
+            <td><a href="slides/session5_cs1671_spring2026.pdf">Machine learning intro, NLP tasks and applications</a></td>
             <td></td>
             <td>Project idea form out 01-29</td>
         </tr>
