@@ -81,7 +81,7 @@ Spring 2026
             <td>01-28 W</td>
             <td><a href="slides/session5_cs1671_spring2026.pdf">Machine learning intro, NLP tasks and applications</a></td>
             <td></td>
-            <td>Project idea form out 01-29</td>
+            <td><a href="https://forms.cloud.microsoft/r/eAqzLSk0yd">Project idea form</a> out</td>
         </tr>
 	<tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 2: N-grams and statistical NLP</td>
@@ -98,7 +98,7 @@ Spring 2026
             <td>02-04 W</td>
             <td>N-gram language models</td>
             <td>J+M 3-3.6, 3.8</td>
-            <td>In-class quiz;<br/><strong>Project idea form due 02-05</strong></td>
+            <td>In-class quiz;<br/><strong><a href="https://forms.cloud.microsoft/r/eAqzLSk0yd">Project idea form</a> due 02-05</strong></td>
         </tr>
         <tr>
             <td>8</td>
