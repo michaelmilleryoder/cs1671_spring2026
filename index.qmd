@@ -81,7 +81,7 @@ Spring 2026
             <td>01-28 W</td>
             <td>Machine learning intro, NLP tasks and applications</td>
             <td></td>
-            <td>In-class quiz;<br/>Project idea form out 01-29</td>
+            <td>Project idea form out 01-29</td>
         </tr>
 	<tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 2: N-grams and statistical NLP</td>
@@ -91,7 +91,7 @@ Spring 2026
             <td>02-02 M</td>
             <td>Bag-of-words and n-grams</td>
             <td>J+M 5.3-5.4</td>
-            <td></td>
+            <td>In-class quiz</td>
         </tr>
         <tr>
             <td>7</td>
