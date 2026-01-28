@@ -73,7 +73,7 @@ Spring 2026
             <td>01-26 M</td>
             <td><a href="slides/session4_cs1671_spring2026.pdf">Words, tokens, and preprocessing</a></td>
             <td>J+M 2-2.6, 2.8, 2.10</td>
-            <td>HW1 out 01-27</td>
+            <td><a href="hw1">HW1</a> out 01-27</td>
         </tr>
         <tr>
         <tr>
@@ -112,7 +112,7 @@ Spring 2026
             <td>02-11 W</td>
             <td>Project match day, CRCD tutorial</td>
             <td></td>
-            <td>In-class quiz;<br/><strong>HW1 due 02-12</strong></td>
+            <td>In-class quiz;<br/><strong><a href="hw1">HW1</a> due 02-12</strong></td>
         </tr>
         <tr>
             <td>10</td>
@@ -266,7 +266,7 @@ Spring 2026
 Description | Points | Percentage of final grade
 ---|---:|---:
 **Homework assignments total** | **300** | **30**
-&ensp;Homework 1 | 60 | 6
+&ensp;[Homework 1](hw1) | 60 | 6
 &ensp;Homework 2 | 120 | 12
 &ensp;Homework 3 | 120 | 12
 **Project total** | **250** | **25**
