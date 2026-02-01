@@ -89,7 +89,7 @@ Spring 2026
         <tr>
             <td>6</td>
             <td>02-02 M</td>
-            <td>Bag-of-words and n-grams</td>
+            <td><a href="slides/session6_cs1671_spring2026.pdf">Bag-of-words and n-grams</a></td>
             <td>J+M 5.3-5.4</td>
             <td>In-class quiz</td>
         </tr>
