@@ -97,7 +97,7 @@ Spring 2026
             <td>7</td>
             <td>02-04 W</td>
             <td>N-gram language models</td>
-            <td>J+M 3-3.6, 3.8</td>
+            <td>J+M 3-3.6.2, 3.8</td>
             <td><strong><a href="https://forms.cloud.microsoft/r/eAqzLSk0yd">Project idea form</a> due 02-05</strong></td>
         </tr>
         <tr>
