@@ -2,7 +2,7 @@
 title: "Project"
 ---
 
-*Last revised 2026-01-10.*
+*Last revised 2026-02-06.*
 
 A major component of this course is a hands-on final project guided by students' own interests. In this project, students will demonstrate an ability to build and evaluate an NLP system that takes in language data and automatically produces some sort of output.
 
