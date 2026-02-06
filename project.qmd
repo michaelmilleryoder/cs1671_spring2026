@@ -82,7 +82,7 @@ Note that this list of project ideas is much greater than the final number of gr
 1. Extract and categorize sentiment from students learning quantum information science (as part of an existing research project).
 1. Classify where formal or informal *you* is used across Romance languages with a T-V distinction (tu-vous, tú-usted, etc) in order to surface context clues for appropriate choice of formality.
 1. Build a speech-to-speech live translator using data such as [CVSS](https://github.com/google-research-datasets/cvss), or build models to identify what language is being spoken from speech data.
-1. Predict genre or artist from song lyrics, or surface emotional cues and sentiment across music genres.
+1. Predict genre or artist from song lyrics, or surface emotional cues and sentiment in song lyrics across genres.
 1. Predict whether posts came from Moltbook or Reddit.
 1. Evaluate "distilling" intelligence of large, high-performance models into smaller models and quantify the reduction in computational cost.
 
