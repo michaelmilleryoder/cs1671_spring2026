@@ -121,7 +121,7 @@ In this part, you need to fill in the functions `check_for_foo_or_bar` and `r
 
 For this part, you will be playing with a small data set of wine reviews (see the [Data](#data) section above for download instructions).
 
-`wine.txt` is in the format of one review per line, followed but a star rating between 1 and 5 (except for 3 reviews, where the review decided to go rogue and give 6 stars. Pft.) The text of the review and the star rating are separated by a single tab character. There is also a file called `stopwords.txt`, which you will use for question 3.6.
+`wine.txt` is in the format of one review per line, followed by a star rating between 1 and 5 (except for 3 reviews, where the review decided to go rogue and give 6 stars. Pft.) The text of the review and the star rating are separated by a single tab character. There is also a file called `stopwords.txt`, which you will use for question 3.6.
 
 `wine.txt` is also a little peculiar in its format. The encoding of the text file is `Latin1` / `ISO-8859-1` and depending on the OS of your machine, the default encoding used when running `open()` may be this encoding or it could be `utf-8` (the default encoding on Linux for example). To ensure compatibility specify the encoding when you read in text files.
 
