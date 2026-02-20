@@ -126,7 +126,7 @@ Spring 2026
             <td>02-18 W</td>
             <td><a href="slides/session11_cs1671_spring2026.pdf">Multinomial logistic regression, text classification evaluation</a></td>
             <td>J+M 4.7-4.10, 4.12</td>
-            <td>In-class quiz;<br/>HW2 out 02-20</td>
+            <td>In-class quiz;<br/><a href="hw2">HW2</a> out 02-20</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 3: Neural networks and word2vec</td>
@@ -170,7 +170,7 @@ Spring 2026
             <td>03-16 M</td>
             <td>Introduction to LLMs</td>
             <td>J+M 7-7.5, 7.7</td>
-            <td><strong>HW2 due 03-17</strong></td>
+            <td><strong><a href="hw2">HW2</a> due 03-17</strong></td>
         <tr>
             <td>17</td>
             <td>03-18 W</td>
@@ -267,7 +267,7 @@ Description | Points | Percentage of final grade
 ---|---:|---:
 **Homework assignments total** | **300** | **30**
 &ensp;[Homework 1](hw1) | 60 | 6
-&ensp;Homework 2 | 120 | 12
+&ensp;[Homework 2](hw2) | 120 | 12
 &ensp;Homework 3 | 120 | 12
 **Project total** | **250** | **25**
 &ensp;Project idea form | 5 | 0.5

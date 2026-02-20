@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Homework 2: Text classification</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e67b7ec49ced46fb4ef6e9c3a8084fd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">CS 1671 / CS 2071 / ISSP 2071 Human Language Technologies, Spring 2026</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./project.html"> 
+<span class="menu-text">Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./hw1.html"> 
+<span class="menu-text">HW1</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#implement-a-deception-classifier" id="toc-implement-a-deception-classifier" class="nav-link" data-scroll-target="#implement-a-deception-classifier">Implement a deception classifier</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#part-1-feature-based-logistic-regression-models" id="toc-part-1-feature-based-logistic-regression-models" class="nav-link" data-scroll-target="#part-1-feature-based-logistic-regression-models">Part 1: Feature-based logistic regression models</a>
+  <ul class="collapse">
+  <li><a href="#include-in-the-report" id="toc-include-in-the-report" class="nav-link" data-scroll-target="#include-in-the-report">Include in the report</a></li>
+  </ul></li>
+  <li><a href="#part-2-submit-your-classifier-in-the-class-challenge" id="toc-part-2-submit-your-classifier-in-the-class-challenge" class="nav-link" data-scroll-target="#part-2-submit-your-classifier-in-the-class-challenge">Part 2: Submit your classifier in the class challenge</a>
+  <ul class="collapse">
+  <li><a href="#how-to-submit-your-classifier" id="toc-how-to-submit-your-classifier" class="nav-link" data-scroll-target="#how-to-submit-your-classifier">How to submit your classifier</a></li>
+  </ul></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Homework 2: Text classification</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Due 2026-03-17, 11:59pm</strong>. <em>Instructions last updated 2026-02-20.</em></p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<p>After completing this assignment, students will be able to:</p>
+<ul>
+<li>Implement a text classification system using logistic regression and feature-based approaches</li>
+<li>Evaluate a text classification system</li>
+<li>Identify informative features in a feature-based text classification system</li>
+<li>Analyze errors in an NLP system</li>
+</ul>
+</section>
+<section id="implement-a-deception-classifier" class="level2">
+<h2 class="anchored" data-anchor-id="implement-a-deception-classifier">Implement a deception classifier</h2>
+<p>You will design and implement a program to classify if a comment from a player of the <a href="https://en.wikipedia.org/wiki/Diplomacy_(game)">Diplomacy</a> game is truthful or not.</p>
+<p>You can use any packages you want for this (scikit-learn, spaCy, NLTK, Gensim, etc., as well as code from in-class example notebooks). Any packages used, along with version numbers, should be specified in an <code>environment.yml</code>, <code>requirements.txt</code> or <code>pyproject.toml</code> file. The version of Python used should also be specified in your <code>README.txt</code> file. If you will be using a language other than Python, please let us know before submitting.</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>Here is the dataset that you should download for this assignment:</p>
+<ul>
+<li><a href="hw2/diplomacy_train.csv"><code>diplomacy_train.csv</code></a>. This dataset has a variety of fields, but the most important are:
+<ul>
+<li><code>text</code>: the text of the comment</li>
+<li><code>intent</code>: 0 for truth, 1 for lie</li>
+</ul></li>
+<li><a href="hw2/diplomacy_dev.csv"><code>diplomacy_dev.csv</code></a>. This is the development set to be used for evaluation and error analysis.</li>
+<li><a href="hw2/diplomacy_kaggle.csv"><code>diplomacy_kaggle.csv</code></a>. This data has the same fields as the training data, but does not have the “correct” intent filled in. This file is to be used as a test set for the challenge competition hosted on Kaggle.</li>
+</ul>
+<p>The data is from a recording of online players of Diplomacy, as presented in <a href="https://aclanthology.org/2020.acl-main.353/">Peskov et al.&nbsp;2020</a>. Negotiation and back-stabbing are key elements of the Diplomacy game.</p>
+</section>
+<section id="part-1-feature-based-logistic-regression-models" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-feature-based-logistic-regression-models">Part 1: Feature-based logistic regression models</h2>
+<p>In this section, you will build a logistic regression model based on bag-of-word features and/or features of your own design, trained on <code>diplomacy_train.csv</code>. You can do whatever preprocessing you see fit, but make sure to mention the preprocessing steps you took in the report. You will report performance on the <code>diplomacy_dev.csv</code> dataset.</p>
+<p>Implement and try the following feature and model combinations:</p>
+<ul>
+<li><em>Logistic regression with bag-of-words (unigram) features</em>. Build a logistic regression classifier that uses bag-of-words (unigram) features.</li>
+<li><em>Logistic regression with your own features/change in preprocessing</em>. Design and test at least two modifications (custom features or preprocessing changes) to unweighted unigram features. Note that these features can be used in conjunction with bag-of-words features or by themselves. Possible features/changes to add and test include:
+<ul>
+<li>Tf-idf transformed bag-of-words features. See J+M 11.1.2 for a description of tf-idf</li>
+<li>Higher order n-gram features (bigrams, trigrams, or combinations of them) beyond the unigrams used for the bag-of-words features</li>
+<li>Different preprocessing (stemming, different tokenizations, stopword removal)</li>
+<li>Changing count bag-of-words features to binary 0 or 1 for the presence of unigrams</li>
+<li>Incorporating features from columns in the dataset other than <code>text</code></li>
+<li>Reducing noisy features with feature selection</li>
+<li>Counts or added weight from custom word lists</li>
+<li>Any other custom-designed feature (such as length of input, number of capitalized words, neural embeddings of text, etc)</li>
+</ul></li>
+</ul>
+<p>You will thus have 3 total logistic regression models: one using bag-of-word features and 2 with your own selected features or preprocessing changes.</p>
+<section id="include-in-the-report" class="level3">
+<h3 class="anchored" data-anchor-id="include-in-the-report">Include in the report</h3>
+<section id="preprocessing-steps" class="level4">
+<h4 class="anchored" data-anchor-id="preprocessing-steps">1. Preprocessing steps</h4>
+<p>What preprocessing was or was not done to the text, including tokenization, lowercasing, removing stopwords or other choices. Mention any packages used for this preprocessing and even if you use default settings, explain what those settings are.</p>
+</section>
+<section id="performance-table" class="level4">
+<h4 class="anchored" data-anchor-id="performance-table">2. Performance table</h4>
+<p>Report a table of performance scores for models trained on each set of features, evaluated on <code>diplomacy_dev.csv</code>. Include accuracy as well as the following metrics for the positive (lying) class: precision, recall, and f1-score.</p>
+</section>
+<section id="feature-descriptions" class="level4">
+<h4 class="anchored" data-anchor-id="feature-descriptions">3. Feature descriptions</h4>
+<p>For each feature or change in input text processing:</p>
+<ol type="1">
+<li>Describe your motivation for including the feature</li>
+<li>Discussion of results: Did it improve performance or not? (Either result is fine. It is not necessary to beat logistic regression with unigram features.)</li>
+</ol>
+</section>
+<section id="informative-features-and-error-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="informative-features-and-error-analysis">4. Informative features and error analysis</h4>
+<p>For a feature-based model of your choice:</p>
+<ol type="1">
+<li>Extract and discuss the most informative features that are mostly strongly positively and negatively associated with deception. <strong>Please normalize feature values to some sort of standard scale for interpretation.</strong> We did not cover this in class, so you will have to do some reading online about it (see scikit-learn’s StandardScaler class as one option). Report the 5 features with the highest weights and 5 features with the lowest (negative) weights. Discuss how these may or may not make sense for this task. You may adapt code provided by the instructor, use another source online (with a mention of the source URL), or write your own. Give specific informative features, such as particular words (e.g.&nbsp;“actually”) for bag-of-words features, instead of sets of features like “bigram features”.</li>
+<li>Do an error analysis. On the dev set, provide a confusion matrix. Sample examples from both false negatives and false positives and present a few of them in the report. Do you see any patterns in these errors? Does the list of informative features provide evidence for any of the patterns you’re seeing? How might these errors be addressed with different features or if the system could understand something else? (You don’t have to implement these, just speculate.)</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="part-2-submit-your-classifier-in-the-class-challenge" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-submit-your-classifier-in-the-class-challenge">Part 2: Submit your classifier in the class challenge</h2>
+<p>Please submit your classifier to run on a hidden held-out test set as part of a class competition. It is necessary to submit one of your classifiers, but you will not be graded on your performance. Instead, bonus points will be awarded for top systems. Bonus points will be awarded in the competition as follows, as measured by accuracy on our held-out test set.</p>
+<ul>
+<li>6 bonus points for the best-performing logistic regression classifier</li>
+<li>4 bonus points for the 2nd best-performing logistic regression classifier</li>
+<li>2 bonus points for the 3rd best-performing logistic regression classifier</li>
+</ul>
+<section id="how-to-submit-your-classifier" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-submit-your-classifier">How to submit your classifier</h3>
+<p>This optional competition is conducted on Kaggle. See this page for instructions on how to submit: <a href="https://www.kaggle.com/t/fa4086c7b9f0469e994075b4c4f427e3" class="uri">https://www.kaggle.com/t/fa4086c7b9f0469e994075b4c4f427e3</a>.</p>
+<p>You will need to create a Kaggle account to submit. Let the instructor know if this is a barrier and we will work something out. <strong>Please provide your Kaggle username used in the competition in your report.</strong> Note that this username will be visible in a leaderboard to other challenge competition participants.</p>
+</section>
+</section>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<ul>
+<li>Don’t feel like you need to write things from scratch; use as many packages as you want. Class Jupyter notebooks, Google, Stack Overflow, and NLP/ML software documentation are your friend! Adapting and consulting other approaches is fine and should be noted in comments in the code and/or in the <code>README.txt</code>. Just don’t use complete, fully-formed implementations, including from generative AI tools. Use all resources as aids, not as a final product, and provide source URLs or generative AI description in code comments.</li>
+<li>Optionally, you may incorporate any form of regularization that you like.</li>
+</ul>
+</section>
+<section id="deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
+<ul>
+<li>Your report with results and answers to questions in Part 1, named <code>hw2_{your pitt email id}.pdf</code>. No need to include <span class="citation" data-cites="pitt.edu">@pitt.edu</span>, just use the email ID before that part. For example: <code>report_mmyoder_hw2.pdf</code>.</li>
+<li>Your code used to train models and estimate performance for Part 1 in a file named <code>hw2_{your pitt email id}_train.py</code>.</li>
+<li>Your code used for the Kaggle submission in Part 2 in a file named <code>hw2_{your pitt email id}_kaggle.py</code>.</li>
+<li>A <code>README.txt</code> file explaining
+<ul>
+<li>The Kaggle username you used to submit your predictions</li>
+<li>how to run the code you used to train your models and calculate dev set performance</li>
+<li>the version of Python used</li>
+<li>any additional files needed to run the code</li>
+<li>any additional resources, references, or web pages you’ve consulted</li>
+<li>any person with whom you’ve discussed the assignment and describe the nature of your discussions</li>
+<li>any generative AI tool used, and how it was used</li>
+<li>any unresolved issues or problems</li>
+</ul></li>
+<li>A <code>requirements.txt</code> file with:
+<ul>
+<li>all Python packages and package versions in the computing environment you used in case we replicate your experiments</li>
+</ul></li>
+</ul>
+<p>Please submit all of this material on Canvas. We will grade your report and look over your code.</p>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<p>See rubric on Canvas.</p>
+</section>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
+<p>This assignment is inspired from a homework assignment by Prof.&nbsp;Diane Litman. Data is from <a href="https://aclanthology.org/2020.acl-main.353/">Peskov et al.&nbsp;2020</a>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
