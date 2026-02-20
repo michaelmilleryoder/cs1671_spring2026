@@ -98,11 +98,12 @@ a form.
 1. **Data**: What data are you using? 
 	1. How many rows (datapoints) are in the dataset and what does each datapoint correspond to? 
 	2. How many columns are in the dataset and what does each correspond to?  
+	1. If applicable, the distribution of the target labels you are predicting. So for a binary sentiment classification task, how many rows in each set (except the test set) are marked negative or positive sentiment? This can be in a table or graph format.
 	3. Provide a very small subset of the data in a table. 
 	4. Please explain where the dataset came from and how it was constructed, if known. 
 	5. Provide links to any URLs if the data is hosted online or links to papers if the dataset is published somewhere. 
 	6. If the data has annotated labels or "gold" text that you are predicting or generating, where do those labels come from?
-1. **Methods**: What approach are you taking to building a NLP system to handle this task? What models and if appropriate, what methods of extracting features from text will be used?  What software packages are you planning to use to build this system? Except in some cases, the approach should draw on statistical approaches we've covered in class so far, such as n-gram representations of text. Talk to the instructor if you are not sure about this.
+1. **Methods**: What approach are you taking to building a NLP system to handle this task? What models and if appropriate, what methods of extracting features from text will be used?  What software packages are you planning to use to build this system? Except in some cases, the approach should draw on statistical approaches we've covered in class so far, such as n-gram representations of text. After we directly cover LLMs in this course, you will propose additional project methods using LLMs. Talk to the instructor if you are not sure about this.
 1. **Evaluation**: How are you evaluating your approach? What performance metrics are you going to use?
 1. **Ethics**: What kinds of ethical issues may be raised by your model or data?
 1. **Steps**: What are the proposed steps needed for completion of (your proposed part) of the project? This should be in some detail, for example, loading and potentially cleaning the data, training models, trying different parameters, evaluating models, etc.
@@ -129,7 +130,6 @@ The progress report will contain a substantive update on your group's progress u
 In this part, please provide the following information about your dataset. It's fine to be working with multiple datasets; just complete this for each one or for a final dataset you will be using if you are combining datasets.
 
 1. If it has been updated from the proposal, provide the number of rows (datapoints) and columns in the dataset and what each datapoint and column corresponds to. If you are splitting the dataset into a training, test, and possible dev sets, how many rows are in each?
-1. If applicable, the distribution of the target labels you are predicting. So for a binary sentiment classification task, how many rows in each set (except the test set) are marked negative or positive sentiment? This can be in a table or graph format.
 1. Optionally, any other distribution or data visualization that you think is helpful for understanding your dataset or task.
 
 ### Part 2: A result from baseline (traditional) approach
