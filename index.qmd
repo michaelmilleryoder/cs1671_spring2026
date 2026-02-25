@@ -141,7 +141,7 @@ Spring 2026
         <tr>
             <td>13</td>
             <td>02-25 W</td>
-            <td>Neural networks part 1, project peer group feedback</td>
+            <td><a href="slides/session13_cs1671_spring2026.pdf">Neural networks part 1, project peer group feedback</a></td>
             <td>J+M 6-6.1, 6.3-6.4</td>
             <td><strong><a href="project.html#project-proposal">Project proposal</a> due 02-27</strong></td>
         </tr>
