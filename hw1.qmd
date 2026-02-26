@@ -80,7 +80,7 @@ In this function, please fill out code to read in the `spanish_test.txt` file an
 * `text`: the text of the line, without any newline character included
 * `character_length`: the number of characters (length) of the line, including whitespace (but not the newline characters you removed from the `text` column). See the Python [string module](https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#writing-to-csv-format) or [pandas string functions](https://pandas.pydata.org/docs/user_guide/text.html#string-methods).
 
-Save this CSV file as `spanish_test.csv`. It will be part of your final submission.
+Include column headers on the first line. Save this CSV file as `spanish_test.csv`. It will be part of your final submission.
 
 
 ## Part 2: Regular expressions

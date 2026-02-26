@@ -253,7 +253,7 @@ Spring 2026
         </tr>
         <tr>
             <td>28</td>
-            <td>TBD</td>
+            <td>05-01 F<br/>10-11:50a</td>
             <td><strong>Project presentations</strong></td>
             <td></td>
             <td><strong>Project report due 04-28</strong></td>
