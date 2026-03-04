@@ -155,7 +155,7 @@ Spring 2026
         <tr>
             <td>15</td>
             <td>03-04 W</td>
-            <td><strong><a href="https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/IQB4aVgnu51JQrHZ0uNj0JvSAbTlp_gf2lb51I2CgXRC5Kk?e=Cgd9fw">Project proposal presentations</a></strong></td>
+            <td><strong><a href="slides/session15_cs1671_spring2026.pdf">Project proposal presentations</a></strong></td>
             <td></td>
             <td></td>
         </tr>
