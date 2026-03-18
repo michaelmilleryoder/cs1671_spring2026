@@ -174,7 +174,7 @@ Spring 2026
         <tr>
             <td>17</td>
             <td>03-18 W</td>
-            <td>Transformers part 1</a></td>
+            <td><a href="slides/session17_cs1671_spring2026.pdf">Transformers part 1</a></td>
             <td>J+M 8-8.2</td>
             <td></td>
         </tr>
