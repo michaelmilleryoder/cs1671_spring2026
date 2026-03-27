@@ -190,7 +190,7 @@ Spring 2026
             <td>03-25 W</td>
             <td><a href="slides/session19_cs1671_spring2026.pdf">Post-training LLMs</a></td>
             <td>J+M 9-9.3, 9.5</td>
-            <td><strong><a href="project.html#progress-report">Project progress report</a> due 03-26</strong>;<br/>HW3 out 03-27</td>
+            <td><strong><a href="project.html#progress-report">Project progress report</a> due 03-26</strong>;<br/><a href="hw3">HW3</a> out 03-27</td>
         </tr>
         <tr>
             <td>20</td>
@@ -235,7 +235,7 @@ Spring 2026
             <td>04-15 W</td>
             <td>Information retrieval, RAG</td>
             <td>J+M 11-11.3, 11.5-11.6</td>
-            <td><strong>HW3 due 04-16</strong></td>
+            <td><strong><a href="hw3">HW3</a> due 04-16</strong></td>
         </tr>
         <tr>
             <td>26</td>
@@ -268,7 +268,7 @@ Description | Points | Percentage of final grade
 **Homework assignments total** | **300** | **30**
 &ensp;[Homework 1](hw1) | 60 | 6
 &ensp;[Homework 2](hw2) | 120 | 12
-&ensp;Homework 3 | 120 | 12
+&ensp;[Homework 3](hw3) | 120 | 12
 **Project total** | **250** | **25**
 &ensp;Project idea form | 5 | 0.5
 &ensp;Project proposal | 50 | 5
