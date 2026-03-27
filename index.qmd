@@ -24,7 +24,7 @@ Spring 2026
 
 
 # Schedule
-*Subject to change. Last revised 2026-03-24. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2026-03-27. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -196,7 +196,7 @@ Spring 2026
             <td>20</td>
             <td>03-30 M</td>
             <td>BERT</td>
-            <td>J+M 10-10.2, 10.4, 10.6<br/><a href="https://journals.sagepub.com/doi/full/10.1177/17456916231201401">Yiu et al. 2023 *(optional)*</a></td>
+            <td>J+M 10-10.2, 10.4-10.4.1, 10.6</td>
             <td></td>
         </tr>
         <tr>
