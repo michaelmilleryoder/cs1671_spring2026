@@ -202,8 +202,8 @@ Spring 2026
         <tr>
             <td>21</td>
             <td>04-01 W</td>
-            <td>Prompting, finetuning, and evaluating LLMs</td>
-            <td>J+M 9.4</td>
+            <td><a href="slides/session21_cs1671_spring2026.pdf">Prompting, finetuning, and evaluating LLMs</a></td>
+            <td>J+M 7.6, 8.8.3, 9.4</td>
             <td>In-class quiz</td>
         </tr>
         <tr>
