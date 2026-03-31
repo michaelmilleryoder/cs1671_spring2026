@@ -24,7 +24,7 @@ Spring 2026
 
 
 # Schedule
-*Subject to change. Last revised 2026-03-27. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2026-03-31. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -242,7 +242,7 @@ Spring 2026
             <td>04-20 M</td>
             <td>Social factors, bias and ethics in NLP</td>
             <td><a href="https://aclanthology.org/P16-2096.pdf">Hovy and Spruit 2016</a>, <a href="https://aclanthology.org/2020.acl-main.485.pdf">Blodgett et al. 2020</a></td>
-            <td></td>
+            <td>Extra credit quiz</td>
         </tr>
         <tr>
             <td>27</td>
