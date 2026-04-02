@@ -209,7 +209,7 @@ Spring 2026
         <tr>
             <td>22</td>
             <td>04-06 M</td>
-            <td>Exam review</td>
+            <td><a href="slides/session22_cs1671_spring2026.pdf">Exam review</a></td>
             <td></td>
             <td></td>
         </tr>
