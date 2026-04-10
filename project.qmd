@@ -141,7 +141,7 @@ In your proposal, you described an initial baseline approach to your task, which
 In the project, you will be comparing your baseline system's performance to that of an LLM. Please describe how you might use an LLM programmatically to attempt your task. The simplest way to do this would be in a "zero-shot" setting where you simply ask the LLM to do the task, but even that requires setting up and passing your data to the LLM and evaluating it. Please describe what you plan to do and which LLM you plan on using. You can also propose using more advanced approaches such as in-context learning (few-shot prompting), chain-of-thought prompting, prompt optimization or fine-tuning. Not all groups have to use an LLM here if you have already talked to the instructor; in that case, please describe the rest of the approach you will be taking to complete the project.
 
 ### Part 4: Open questions and challenges
-Please describe any open questions or challenges your group has at this point. Will you need any resources other than the ones provided in class (OpenAI API access, CRCD access) or have any other questions? Also describe if the roles for each of your team members have changed since the proposal and if so, what the new roles are.
+Please describe any open questions or challenges your group has at this point. Will you need any resources other than the ones provided in class (SCI open-source LLM API, CRCD) or have any other questions? Also describe if the roles for each of your team members have changed since the proposal and if so, what the new roles are.
 
 ### Deliverable
 Assemble your results and writing for each part in a document to submit as a PDF on Canvas. There is no required format for this document other than being in PDF format.

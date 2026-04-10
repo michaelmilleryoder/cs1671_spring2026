@@ -24,7 +24,7 @@ Spring 2026
 
 
 # Schedule
-*Subject to change. Last revised 2026-03-31. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2026-04-10. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -226,8 +226,8 @@ Spring 2026
         <tr>
             <td>24</td>
             <td>04-13 M</td>
-            <td>Machine translation</td>
-            <td>J+M 12-12.3, 12.6-12.8</td>
+            <td><a href="slides/session24_cs1671_spring2026.pdf">Machine translation</a></td>
+            <td>J+M 12-12.4, 12.6-12.8</td>
             <td></td>
         </tr>
         <tr>
