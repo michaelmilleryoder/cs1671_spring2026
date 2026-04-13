@@ -249,14 +249,14 @@ Spring 2026
             <td>04-22 W</td>
             <td>Project work time (in class)</td>
             <td></td>
-            <td></td>
+            <td><strong>Project report due 04-28</strong></td>
         </tr>
         <tr>
             <td>28</td>
             <td>05-01 F<br/>10-11:50a</td>
             <td><strong>Project presentations</strong></td>
             <td></td>
-            <td><strong>Project report due 04-28</strong></td>
+            <td></td>
         </tr>
     </tbody>
 </table>
