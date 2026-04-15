@@ -24,7 +24,7 @@ Spring 2026
 
 
 # Schedule
-*Subject to change. Last revised 2026-04-10. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2026-04-14. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -233,8 +233,8 @@ Spring 2026
         <tr>
             <td>25</td>
             <td>04-15 W</td>
-            <td>Information retrieval, RAG</td>
-            <td>J+M 11-11.3, 11.5-11.6</td>
+            <td><a href="slides/session25_cs1671_spring2026.pdf">Information retrieval, RAG</a></td>
+            <td>J+M 11</td>
             <td><strong><a href="hw3">HW3</a> due 04-16</strong></td>
         </tr>
         <tr>

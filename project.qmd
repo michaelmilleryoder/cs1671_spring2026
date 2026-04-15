@@ -193,7 +193,7 @@ A rubric used in grading will be provided.
 
 
 ## Final presentation
-*In class TBD*.  
+*In class 05-01, 10-11:50am*.  
 Groups will present their finished work to the group, with Q&A and feedback opportunities from students. Please prepare a maximum 7-minute presentation. 
 A shared PowerPoint presentation will be provided to add your group's slides to.
 <!--Add your slides to this [shared PowerPoint presentation](https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EdWBs5h0nvRDrqPWUMMPCzgB4c3HkyySL47wUw1DY0y2bw?e=T0kmWQ).-->
