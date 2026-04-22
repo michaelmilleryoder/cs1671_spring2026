@@ -156,14 +156,15 @@ This report will be in the ACL format found [here](https://github.com/acl-org/ac
 2. **Introduction**. Include motivation for the project and examples of input and output. Detail the approaches you take and summarize your final results.
 3. **Data**. Please provide the size of the dataset and an explanation of what each datapoint (input passed to the system) is.
 4. **Methods**. Describe methods used for your baseline and LLM systems. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine). For LLM approaches, provide what exact prompt template was used for LLM approaches (in an appendix if needed for space), how examples were selected for few-shot prompting if used, as well as exact LLM model names.
-5. **Results and evaluation**. In addition to a quantitative evaluation, include examples of input and output (predicted output from your system as well as the correct "gold" output, if applicable). Include an error analysis of themes of errors observed.
-6. Discussion: Please discuss the significance of the results that you see and any other comments about what these results indicate to you. Provide an analysis of common errors from different systems.
-9. Future work. This is a good place to describe things you thought about but never had time to complete!
-7. Limitations (doesn't count toward page limit)
-8. Ethical issues (doesn't count toward page limit)
-10. Group member task breakdown (doesn't count toward page limit). This section details the high-level tasks that each group member completed.
-11. References (doesn't count toward page limit). If you are able to, please fill in full references instead of just URLs. The references can use any format.
-12. Appendices (optional, doesn't count toward page limit). Additional figures or explanation in one or more appendices is allowed, but they will not necessarily be considered in grading. 
+5. **Results and evaluation**. In addition to a quantitative evaluation, include examples of input and output (predicted output from your system as well as the correct "gold" output, if applicable). For at least one of your systems, include an error analysis with how many instances of different types of errors your system has (false positive, false negatives, etc), as well as examples of errors and any themes observed.
+6. **Discussion**. Please discuss the significance of the results that you see and any other comments about what these results indicate to you.
+9. **Future work**. This is a good place to describe things you thought about but never had time to complete! You can also refer back to themes of errors you found in your error analysis and how they might be addressed.
+7. **Limitations** (doesn't count toward page limit)
+8. **Ethical issues** (doesn't count toward page limit)
+10. **Group member task breakdown** (doesn't count toward page limit). Detail the high-level tasks that each group member completed.
+11. **References** (doesn't count toward page limit). If you are able to, please fill in full references instead of just URLs. The references can use any format. If you are using the LaTeX template, consider adding citations in BibTeX and they will automatically be formatted.
+12. **Appendices** (optional, doesn't count toward page limit). Additional figures or explanation in one or more appendices is allowed, but they will not necessarily be considered in grading. 
+13. **Sharing permission** (doesn't count toward page limit). Are you okay with the instructor sharing your report after the course ends? Sometimes project reports are helpful for students and faculty working on similar problems. It’s fine to say no or that the instructor needs to ask permission before sharing!
 
 <!--A rubric used in grading will be provided.-->
 Here is the rubric that will be used in grading:
