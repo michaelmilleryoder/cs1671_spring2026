@@ -152,11 +152,11 @@ At the end of the course, groups will provide a written report of their project.
 
 This report will be in the ACL format found [here](https://github.com/acl-org/acl-style-files). Feel free to use the Word or LaTeX templates (which is also available as an Overleaf template). The report should be a maximum of 8 pages, not including limitations, ethics, group member task breakdown, references sections or appendices. Feel free to include content from the project proposal and progress report. There is flexibility in section names, but please provide information about the following aspects of the project:
 
-1. Abstract: a brief overview of your entire project, including what approaches you took on which datasets and any findings.
-2. Introduction: should include motivation for the project and more detail on the approaches you take and your final results.
-3. Data: should include the final number of datapoints and columns in the data (can be copied from the proposal)
-4. Methods. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine). For LLM approaches, provide what exact prompt template was used for LLM approaches (in an appendix if needed for space), how examples were selected for few-shot prompting if used, as well as exact LLM model names.
-5. Results: Include examples of input and output (predicted output from your system as well as the correct "gold" output, if applicable).
+1. **Abstract.** A brief overview of your entire project, including what approaches you took on which datasets and any findings.
+2. **Introduction**. Include motivation for the project and examples of input and output. Detail the approaches you take and summarize your final results.
+3. **Data**. Please provide the size of the dataset and an explanation of what each datapoint (input passed to the system) is.
+4. **Methods**. Describe methods used for your baseline and LLM systems. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine). For LLM approaches, provide what exact prompt template was used for LLM approaches (in an appendix if needed for space), how examples were selected for few-shot prompting if used, as well as exact LLM model names.
+5. **Results and evaluation**. In addition to a quantitative evaluation, include examples of input and output (predicted output from your system as well as the correct "gold" output, if applicable). Include an error analysis of themes of errors observed.
 6. Discussion: Please discuss the significance of the results that you see and any other comments about what these results indicate to you. Provide an analysis of common errors from different systems.
 9. Future work. This is a good place to describe things you thought about but never had time to complete!
 7. Limitations (doesn't count toward page limit)
@@ -165,17 +165,17 @@ This report will be in the ACL format found [here](https://github.com/acl-org/ac
 11. References (doesn't count toward page limit). If you are able to, please fill in full references instead of just URLs. The references can use any format.
 12. Appendices (optional, doesn't count toward page limit). Additional figures or explanation in one or more appendices is allowed, but they will not necessarily be considered in grading. 
 
-A rubric used in grading will be provided.
-<!--Here is the rubric that will be used in grading:
+<!--A rubric used in grading will be provided.-->
+Here is the rubric that will be used in grading:
 
 |Rubric category | Points|
 |-------------------|-:|
 |Clear motivation for the work is provided | 4|
 |Task definition and format of the input and output is clear | 9|
-|Applicable dataset/s are chosen and preprocessed | 10|
+|Applicable dataset/s are chosen and preprocessed. Basic dataset statistics are properly described | 10|
 |Baseline system is properly designed and implemented | 15|
 |LLM-based system is properly designed and implemented | 15|
-|Results from a comparison between systems are provided | 20|
+|Results (evaluation) from a comparison between systems are provided | 20|
 |Discussion is provided of the results and implications | 10|
 |Potential future work is discussed | 4|
 |Limitations of your approach or dataset are sufficiently discussed | 4|
@@ -189,7 +189,6 @@ A rubric used in grading will be provided.
 |Task and roles assigned to this group member were completed sufficiently | 15|
 |***Individual contribution total*** | ***30***|
 |***Grand total*** | ***140***|
--->
 
 
 ## Final presentation

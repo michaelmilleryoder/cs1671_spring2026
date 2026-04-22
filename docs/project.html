@@ -332,11 +332,11 @@ Groups will make a brief presentation to the class outlining their proposed proj
 At the end of the course, groups will provide a written report of their project. This project includes a quantitative comparison between at least two NLP systems on a clearly specified task or tasks. One of these is generally a more traditional NLP approach and the other involves LLMs, though your group’s project may vary if you have discussed this with the instructor.</p>
 <p>This report will be in the ACL format found <a href="https://github.com/acl-org/acl-style-files">here</a>. Feel free to use the Word or LaTeX templates (which is also available as an Overleaf template). The report should be a maximum of 8 pages, not including limitations, ethics, group member task breakdown, references sections or appendices. Feel free to include content from the project proposal and progress report. There is flexibility in section names, but please provide information about the following aspects of the project:</p>
 <ol type="1">
-<li>Abstract: a brief overview of your entire project, including what approaches you took on which datasets and any findings.</li>
-<li>Introduction: should include motivation for the project and more detail on the approaches you take and your final results.</li>
-<li>Data: should include the final number of datapoints and columns in the data (can be copied from the proposal)</li>
-<li>Methods. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine). For LLM approaches, provide what exact prompt template was used for LLM approaches (in an appendix if needed for space), how examples were selected for few-shot prompting if used, as well as exact LLM model names.</li>
-<li>Results: Include examples of input and output (predicted output from your system as well as the correct “gold” output, if applicable).</li>
+<li><strong>Abstract.</strong> A brief overview of your entire project, including what approaches you took on which datasets and any findings.</li>
+<li><strong>Introduction</strong>. Include motivation for the project and examples of input and output. Detail the approaches you take and summarize your final results.</li>
+<li><strong>Data</strong>. Please provide the size of the dataset and an explanation of what each datapoint (input passed to the system) is.</li>
+<li><strong>Methods</strong>. Describe methods used for your baseline and LLM systems. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine). For LLM approaches, provide what exact prompt template was used for LLM approaches (in an appendix if needed for space), how examples were selected for few-shot prompting if used, as well as exact LLM model names.</li>
+<li><strong>Results and evaluation</strong>. In addition to a quantitative evaluation, include examples of input and output (predicted output from your system as well as the correct “gold” output, if applicable). Include an error analysis of themes of errors observed.</li>
 <li>Discussion: Please discuss the significance of the results that you see and any other comments about what these results indicate to you. Provide an analysis of common errors from different systems.</li>
 <li>Future work. This is a good place to describe things you thought about but never had time to complete!</li>
 <li>Limitations (doesn’t count toward page limit)</li>
@@ -345,30 +345,98 @@ At the end of the course, groups will provide a written report of their project.
 <li>References (doesn’t count toward page limit). If you are able to, please fill in full references instead of just URLs. The references can use any format.</li>
 <li>Appendices (optional, doesn’t count toward page limit). Additional figures or explanation in one or more appendices is allowed, but they will not necessarily be considered in grading.</li>
 </ol>
-<p>A rubric used in grading will be provided. <!--Here is the rubric that will be used in grading:
-
-|Rubric category | Points|
-|-------------------|-:|
-|Clear motivation for the work is provided | 4|
-|Task definition and format of the input and output is clear | 9|
-|Applicable dataset/s are chosen and preprocessed | 10|
-|Baseline system is properly designed and implemented | 15|
-|LLM-based system is properly designed and implemented | 15|
-|Results from a comparison between systems are provided | 20|
-|Discussion is provided of the results and implications | 10|
-|Potential future work is discussed | 4|
-|Limitations of your approach or dataset are sufficiently discussed | 4|
-|Ethical issues that may be raised by your system or dataset are sufficiently discussed | 4|
-|Group member task breakdown is provided | 4|
-|***Project content total*** | ***95***|
-|Meets all formatting requirements. Is maximum 8 pages, not including limitations, ethics, references or group member task breakdown | 7|
-|Writing is clear | 8|
-|***Writing total*** | ***15***|
-|Group member had a sufficient amount of workload in the project | 15|
-|Task and roles assigned to this group member were completed sufficiently | 15|
-|***Individual contribution total*** | ***30***|
-|***Grand total*** | ***140***|
---></p>
+<!--A rubric used in grading will be provided.-->
+<p>Here is the rubric that will be used in grading:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 90%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rubric category</th>
+<th style="text-align: right;">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Clear motivation for the work is provided</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td>Task definition and format of the input and output is clear</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td>Applicable dataset/s are chosen and preprocessed. Basic dataset statistics are properly described</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td>Baseline system is properly designed and implemented</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="odd">
+<td>LLM-based system is properly designed and implemented</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="even">
+<td>Results (evaluation) from a comparison between systems are provided</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td>Discussion is provided of the results and implications</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td>Potential future work is discussed</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td>Limitations of your approach or dataset are sufficiently discussed</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td>Ethical issues that may be raised by your system or dataset are sufficiently discussed</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td>Group member task breakdown is provided</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td><strong><em>Project content total</em></strong></td>
+<td style="text-align: right;"><strong><em>95</em></strong></td>
+</tr>
+<tr class="odd">
+<td>Meets all formatting requirements. Is maximum 8 pages, not including limitations, ethics, references or group member task breakdown</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td>Writing is clear</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td><strong><em>Writing total</em></strong></td>
+<td style="text-align: right;"><strong><em>15</em></strong></td>
+</tr>
+<tr class="even">
+<td>Group member had a sufficient amount of workload in the project</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="odd">
+<td>Task and roles assigned to this group member were completed sufficiently</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="even">
+<td><strong><em>Individual contribution total</em></strong></td>
+<td style="text-align: right;"><strong><em>30</em></strong></td>
+</tr>
+<tr class="odd">
+<td><strong><em>Grand total</em></strong></td>
+<td style="text-align: right;"><strong><em>140</em></strong></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="final-presentation" class="level2">
 <h2 class="anchored" data-anchor-id="final-presentation">Final presentation</h2>
