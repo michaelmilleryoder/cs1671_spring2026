@@ -247,14 +247,14 @@ Spring 2026
         <tr>
             <td>27</td>
             <td>04-22 W</td>
-            <td>Project work time (in class)</td>
+            <td><a href="slides/session27_cs1671_spring2026.pdf">Project work time (in class)</a></td>
             <td></td>
             <td><strong>Project report due 04-28</strong></td>
         </tr>
         <tr>
             <td>28</td>
             <td>05-01 F<br/>10-11:50a</td>
-            <td><strong>Project presentations</strong></td>
+            <td><strong><a href="https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/IQBXK-Gtvjv_TblMZevyD12_Aa59YZ7M_USWIj5SXOkUeSY?e=6vWiP6">Project presentations</a></strong></td>
             <td></td>
             <td></td>
         </tr>
